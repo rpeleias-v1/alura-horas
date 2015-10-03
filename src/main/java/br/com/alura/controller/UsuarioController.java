@@ -6,6 +6,7 @@ import br.com.alura.dao.UsuarioDAO;
 import br.com.alura.model.Usuario;
 import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Get;
+import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.interceptor.IncludeParameters;
@@ -29,6 +30,7 @@ public class UsuarioController {
 		this.validator = validator;
 	}
 	
+	@Get
 	public void form() {		
 	}
 	
