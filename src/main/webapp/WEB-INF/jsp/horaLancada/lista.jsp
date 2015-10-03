@@ -9,6 +9,7 @@
 			<th>Data</th>
 			<th>Hora Inicial</th>
 			<th>Hora Final</th>
+			<th>Duração</th>
 		</tr>
 	</thead>
 	
@@ -19,6 +20,7 @@
 				<td>${h.data.time}</td>
 				<td>${h.horaInicial}</td>
 				<td>${h.horaFinal}</td>
+				<td>${h.duracao}</td>
 			</tr>			
 		</c:forEach>
 	</tbody>

@@ -9,6 +9,7 @@ import br.com.alura.sessao.UsuarioLogado;
 import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Result;
+import br.com.caelum.vraptor.interceptor.IncludeParameters;
 import br.com.caelum.vraptor.validator.Validator;
 
 @Controller
@@ -36,6 +37,7 @@ public class HoraLancadaController {
 	public void form() {		
 	}
 	
+	@IncludeParameters
 	public void adiciona(@Valid HoraLancada horaLancada) {
 		validator.onErrorRedirectTo(this).form();
 		horaLancada.setUsuario(usuarioLogado.getUsuario());
