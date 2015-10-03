@@ -23,9 +23,7 @@ public class HoraLancadaDAO {
 	}
 	
 	public void adiciona(HoraLancada horaLancada ) {
-		this.em.getTransaction().begin();
 		this.em.persist(horaLancada);
-		this.em.getTransaction().commit();
 	}
 	
 	public List<HoraLancada> lista() {

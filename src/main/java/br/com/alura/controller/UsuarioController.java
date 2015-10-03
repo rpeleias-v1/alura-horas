@@ -2,6 +2,7 @@ package br.com.alura.controller;
 
 import javax.inject.Inject;
 
+import br.com.alura.annotations.Transacional;
 import br.com.alura.dao.UsuarioDAO;
 import br.com.alura.model.Usuario;
 import br.com.caelum.vraptor.Controller;
@@ -34,6 +35,7 @@ public class UsuarioController {
 	public void form() {		
 	}
 	
+	@Transacional
 	@IncludeParameters
 	@Post
 	public void adiciona(Usuario usuario) {

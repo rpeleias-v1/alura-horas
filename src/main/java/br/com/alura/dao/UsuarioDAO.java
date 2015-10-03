@@ -7,6 +7,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
 
+import br.com.alura.annotations.Transacional;
 import br.com.alura.model.Usuario;
 
 public class UsuarioDAO {
@@ -21,11 +22,9 @@ public class UsuarioDAO {
 	public UsuarioDAO(EntityManager em) {
 		this.em = em;
 	}
-
+	
 	public void adiciona(Usuario usuario) {
-		em.getTransaction().begin();
 		em.persist(usuario);
-		em.getTransaction().commit();
 	}
 	
 	public List<Usuario> lista() {

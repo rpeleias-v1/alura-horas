@@ -5,6 +5,7 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.validation.Valid;
 
+import br.com.alura.annotations.Transacional;
 import br.com.alura.dao.HoraLancadaDAO;
 import br.com.alura.model.HoraLancada;
 import br.com.alura.sessao.UsuarioLogado;
@@ -40,6 +41,7 @@ public class HoraLancadaController {
 	public void form() {		
 	}
 	
+	@Transacional
 	@IncludeParameters
 	public void adiciona(@Valid HoraLancada horaLancada) {
 		validator.onErrorRedirectTo(this).form();
