@@ -7,6 +7,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
 import br.com.alura.model.HoraLancada;
+import br.com.alura.model.Usuario;
 
 public class HoraLancadaDAO {
 	
@@ -33,4 +34,9 @@ public class HoraLancadaDAO {
 	}
 	
 
+	public List<HoraLancada> horasDoUsuario(Usuario usuario) {
+		TypedQuery<HoraLancada> query = this.em.createQuery("select h from HoraLancada h where h.usuario = :usuario order by h.data", HoraLancada.class);
+		query.setParameter("usuario", usuario);
+		return query.getResultList();
+	}
 }

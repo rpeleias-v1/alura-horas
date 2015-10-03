@@ -42,7 +42,6 @@ public class UsuarioDAO {
 			return query.getSingleResult();
 		} catch(NoResultException e) {
 			return null;
-		}
-		
+		}		
 	}
 }
